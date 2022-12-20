@@ -1,13 +1,15 @@
 package encapsulation;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Tester {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         House house = new House();
-        house.setAddress("Via Roma, ");
-        house.setFloorsNumber(2);
-        house.setResidentsNames(new String[]{": Nino, Pino, Lu, Albert"});
+        house.setAddress(scanner.nextLine());
+        house.setFloorsNumber(scanner.nextInt());
+        house.setResidentsNames(scanner.next().split(","));
         System.out.printf(house.getAddress() + house.getFloorsNumber() + Arrays.toString(house.getResidentsNames()));
 
     }

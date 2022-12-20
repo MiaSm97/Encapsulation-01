@@ -1,16 +1,34 @@
 package encapsulation;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-
-@Data
-
 public class House {
-    String address;
-    int floorsNumber;
-    String[] residentsNames;
+    private String address;
+    private int floorsNumber;
+    private String[] residentsNames;
 
 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public int getFloorsNumber() {
+        return floorsNumber;
+    }
+
+    public void setFloorsNumber(int floorsNumber) {
+        this.floorsNumber = floorsNumber;
+    }
+
+    public String[] getResidentsNames() {
+        return residentsNames;
+    }
+
+    public void setResidentsNames(String[] residentsNames) {
+        this.residentsNames = residentsNames;
+    }
 }
     /*achieve encapsulation using getters/setters for a class House that has the following instance variables:
         an int floorsNumber
